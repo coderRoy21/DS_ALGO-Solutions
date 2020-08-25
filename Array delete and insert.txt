@@ -1,0 +1,32 @@
+
+int insert(int arr[],int val,int pos,int total_size,int len)
+{
+     len++;
+    if(len > total_size)
+    
+    {
+        cout<<"array full, cannot insert value";
+    }
+    else{
+    
+    int i;
+    for(i=len;i>=pos;i--)
+    {
+        arr[i]= arr[i-1];
+    }
+    
+    arr[pos-1]= val;
+    }
+    return len;
+}
+
+int del(int arr[],int pos,int len)
+{
+int i;
+ for(i=pos-1;i<=len;i++)
+ {
+     arr[i]= arr[i+1];
+ }
+ len--;
+ return len;
+}    
